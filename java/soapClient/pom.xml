@@ -89,7 +89,7 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>xjc</id>
+						<id>service1</id>
 						<goals>
 							<goal>xjc</goal>
 						</goals>
