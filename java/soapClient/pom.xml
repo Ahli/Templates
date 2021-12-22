@@ -19,7 +19,7 @@
 	<properties>
 		<java.version>17</java.version>
 
-		<maven-jaxb2-plugin.version>0.14.0</maven-jaxb2-plugin.version>
+		<jaxb2-maven-plugin.version>2.5.0</jaxb2-maven-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -86,58 +86,28 @@
 
 			<!-- soap client generation -->
 			<plugin>
-				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>${maven-jaxb2-plugin.version}</version>
-				<dependencies>
-					<!-- support JDK 17 -->
-					<dependency>
-						<groupId>org.glassfish.jaxb</groupId>
-						<artifactId>jaxb-runtime</artifactId>
-						<!-- use the version defined by the Spring parent -->
-						<version>${glassfish-jaxb.version}</version>
-					</dependency>
-				</dependencies>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>${jaxb2-maven-plugin.version}</version>
 				<configuration>
-					<schemaLanguage>WSDL</schemaLanguage>
-					<episode>false</episode>
+					<sourceType>wsdl</sourceType>
 				</configuration>
 				<executions>
 					<execution>
-						<id>service1</id>
+						<id>xjc</id>
 						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<generateDirectory>
-								${project.build.directory}/generated-sources/xjc-service1/src/main/java
-							</generateDirectory>
-							<schemaDirectory>src/main/resources/wsdl</schemaDirectory>
-							<schemaIncludes>
-								<include>service1.wsdl</include>
-							</schemaIncludes>
-							<bindingDirectory>${project.basedir}/src/main/resources/bindings</bindingDirectory>
-							<bindingIncludes>service1.xjb</bindingIncludes>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.2.0</version>
-				<executions>
-					<execution>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-source</goal>
+							<goal>xjc</goal>
 						</goals>
 						<configuration>
 							<sources>
-								<source>
-									${project.build.directory}/generated-sources/xjc-service1/src/main/java
-								</source>
+								<source>src/main/resources/wsdl/service1.wsdl</source>
 							</sources>
+							<outputDirectory>
+								${project.build.directory}/generated-sources/xjc-service1/src/main/java
+							</outputDirectory>
+							<xjbSources>
+								<xjbSource>src/main/resources/bindings/service1.xjb</xjbSource>
+							</xjbSources>
 						</configuration>
 					</execution>
 				</executions>
