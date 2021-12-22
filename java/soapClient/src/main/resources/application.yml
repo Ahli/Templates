@@ -1,0 +1,3 @@
+com.ahli.example.demo:
+  service1:
+    url: http://localhost:8081

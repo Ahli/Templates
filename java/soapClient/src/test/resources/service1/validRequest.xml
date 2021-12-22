@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:getValue xmlns:ns3="http://soapservice1.ahli.com/">
+	<param1><![CDATA[>>>123<<<]]></param1>
+</ns3:getValue>
