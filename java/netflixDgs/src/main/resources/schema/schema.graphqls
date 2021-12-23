@@ -1,0 +1,22 @@
+
+scalar UUID
+
+input ShowInput {
+    title: String!
+    releaseYear: Int!
+}
+
+type Query {
+    shows(titleFilter: String): [Show]
+}
+
+type Mutation {
+    createShow(showInput: ShowInput!): Show
+}
+
+# A Show object
+type Show {
+    id: ID!
+    title: String
+    releaseYear: Int
+}

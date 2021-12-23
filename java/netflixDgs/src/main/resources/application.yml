@@ -1,0 +1,6 @@
+dgs.graphql:
+  path: "/graphql"
+  schema-locations: "classpath*:schema/**/*.graphql*"
+  graphiql:
+    enabled: true
+    path: "/graphiql"
