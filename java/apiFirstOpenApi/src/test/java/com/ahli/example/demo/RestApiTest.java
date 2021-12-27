@@ -63,12 +63,12 @@ class RestApiTest {
 	void testShouldRespondAsExpectedAfterUnexpectedException() throws Exception {
 		when(delegate.listPets(any())).thenThrow(new NullPointerException("test"));
 		
-		mockMvc.perform(get(ENDPOINT_PETS)).andExpect(status().isInternalServerError()).andExpect(content().string("""
-		                                                                                                             {
-		                                                                                                                "code": 500,
-		                                                                                                                "message": "Service encountered unexpected error"
-		                                                                                                             }
-		                                                                                                           """));
+		mockMvc.perform(get(ENDPOINT_PETS)).andExpect(status().isInternalServerError()).andExpect(content().json("""
+		                                                                                                          {
+		                                                                                                             "code": 500,
+		                                                                                                             "message": "Service encountered unexpected error"
+		                                                                                                          }
+		                                                                                                         """));
 	}
 	
 	@Test
@@ -77,11 +77,11 @@ class RestApiTest {
 				.andDo(print())
 				.andExpect(status().isBadRequest())
 				.andExpect(content().json("""
-				                            {
-				                               "code": 400,
-				                               "message": "Request could not be validated: Payload could not be processed"
-				                            }
-				                            """));
+				                          {
+				                             "code": 400,
+				                             "message": "Request could not be validated: Payload could not be processed"
+				                          }
+				                          """));
 	}
 	
 	@TestConfiguration

@@ -29,7 +29,7 @@ public class ShowDataFetcher {
 	}
 	
 	@DgsMutation
-	public Show createShow(ShowInput showInput){
+	public Show createShow(ShowInput showInput) {
 		
 		return null;
 		
