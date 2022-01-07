@@ -12,7 +12,7 @@ import spock.lang.Specification
 @SpringBootTest
 @EnableWebMvc
 @AutoConfigureMockMvc
-class WebControllerSpec extends Specification {
+class WebControllerTest extends Specification {
 
     @Autowired
     MockMvc mockMvc

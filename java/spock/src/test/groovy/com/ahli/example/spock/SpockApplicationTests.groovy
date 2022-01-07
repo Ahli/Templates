@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import spock.lang.Specification
 
 @SpringBootTest
-class SpockApplicationSpec extends Specification {
+class SpockApplicationTests extends Specification {
 
     // test examples: https://github.com/spockframework/spock-example/tree/master/src/test/groovy
 
