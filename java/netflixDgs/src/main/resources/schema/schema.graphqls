@@ -1,5 +1,5 @@
 
-scalar UUID
+#scalar UUID
 
 input ShowInput {
     title: String!

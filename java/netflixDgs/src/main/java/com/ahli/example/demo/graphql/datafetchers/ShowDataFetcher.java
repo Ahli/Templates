@@ -22,17 +22,14 @@ public class ShowDataFetcher {
 	@DgsQuery
 	public List<Show> shows(@InputArgument final String titleFilter) {
 		if (titleFilter == null) {
-			return shows;
+			return showService.shows();
 		}
-		
-		return shows.stream().filter(s -> s.getTitle().contains(titleFilter)).toList();
+		return showService.shows(titleFilter);
 	}
 	
 	@DgsMutation
-	public Show createShow(ShowInput showInput) {
-		
-		return null;
-		
+	public Show createShow(final ShowInput showInput) {
+		return showService.add(showInput);
 	}
 	
 }
