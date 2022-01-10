@@ -19,9 +19,9 @@
 	<properties>
 		<java.version>17</java.version>
 
-		<graphqlcodegen-maven-plugin.version>1.14</graphqlcodegen-maven-plugin.version>
+		<graphqlcodegen-maven-plugin.version>1.16</graphqlcodegen-maven-plugin.version>
 		<graphql-dgs-codegen-client-core.version>5.1.16</graphql-dgs-codegen-client-core.version>
-		<graphql-dgs-spring-boot-starter.version>4.9.15</graphql-dgs-spring-boot-starter.version>
+		<graphql-dgs-spring-boot-starter.version>4.9.16</graphql-dgs-spring-boot-starter.version>
 	</properties>
 
 	<dependencies>
