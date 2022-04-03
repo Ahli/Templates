@@ -14,9 +14,7 @@ class SpockApplicationTests extends Specification {
     WebController webController
 
     def "context loads"() {
-        when: "Spring started"
-        true
-        then: "beans are created"
+        expect:
         webController != null
     }
 

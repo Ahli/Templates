@@ -20,9 +20,10 @@ class WebControllerTest extends Specification {
     def "/hello returns valid"() {
         when: "calling GET /hello"
         def result = mockMvc.perform(MockMvcRequestBuilders.get("/hello")).andReturn();
+
         then: "status is OK"
         result.getResponse().getStatus() == HttpStatus.OK.value()
-        then: "content as expected"
+        and: "content as expected"
         result.getResponse().getContentAsString().equals("Hello world!")
     }
 
