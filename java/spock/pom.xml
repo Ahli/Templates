@@ -20,6 +20,8 @@
 		<java.version>17</java.version>
 
 		<spock-spring.version>2.1-groovy-3.0</spock-spring.version>
+		<gmavenplus-plugin.version>1.13.1</gmavenplus-plugin.version>
+		<maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -53,7 +55,7 @@
 			<plugin>
 				<groupId>org.codehaus.gmavenplus</groupId>
 				<artifactId>gmavenplus-plugin</artifactId>
-				<version>1.13.1</version>
+				<version>${gmavenplus-plugin.version}</version>
 				<executions>
 					<execution>
 						<goals>
@@ -64,7 +66,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M5</version>
+				<version>${maven-surefire-plugin.version}</version>
 				<configuration>
 					<!-- see: https://github.com/spockframework/spock-example/blob/master/pom.xml -->
 					<useModulePath>false</useModulePath> <!-- https://issues.apache.org/jira/browse/SUREFIRE-1809 -->
