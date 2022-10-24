@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.3</version>
+		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -20,11 +20,11 @@
 		<java.version>17</java.version>
 
 		<!-- https://github.com/deweyjose/graphqlcodegen -->
-		<graphqlcodegen-maven-plugin.version>1.22</graphqlcodegen-maven-plugin.version>
+		<graphqlcodegen-maven-plugin.version>1.24</graphqlcodegen-maven-plugin.version>
 		<graphql-dgs-codegen-client-core.version>5.1.17</graphql-dgs-codegen-client-core.version>
-		<graphql-dgs-spring-boot-starter.version>5.1.1</graphql-dgs-spring-boot-starter.version>
+		<graphql-dgs-spring-boot-starter.version>5.3.0</graphql-dgs-spring-boot-starter.version>
 		<!-- https://github.com/graphql-java/graphql-java-extended-scalars/releases -->
-		<graphql-java-extended-scalars.version>18.1</graphql-java-extended-scalars.version>
+		<graphql-java-extended-scalars.version>19.0</graphql-java-extended-scalars.version>
 		<build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
 	</properties>
 
