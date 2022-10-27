@@ -1,4 +1,4 @@
-package com.ahli.example.demo;
+package mongodb.timeseries.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

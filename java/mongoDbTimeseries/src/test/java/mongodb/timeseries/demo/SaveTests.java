@@ -1,5 +1,8 @@
-package com.ahli.example.demo;
+package mongodb.timeseries.demo;
 
+import mongodb.timeseries.demo.persistence.model.Measurement;
+import mongodb.timeseries.demo.persistence.model.MetaData;
+import mongodb.timeseries.demo.persistence.repository.MeasurementRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +22,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Testcontainers
 @SpringBootTest
-class CrudTest {
+class SaveTests {
 	
 	@Container
 	private static final MongoDBContainer mongo = new MongoDBContainer(DockerImageName.parse("mongo:6.0.2"));
@@ -44,8 +47,9 @@ class CrudTest {
 		MetaData metaData = new MetaData("device_1", "hoursOnline");
 		Instant timestamp = Instant.parse("2022-11-03T18:00:00.00Z");
 		List<Measurement> measurements = new ArrayList<>(1000);
-		float value = 1000f;
-		
+		float value = 1000;
+
+		// create 1000 measurements from 1 to 1000
 		for (int i = 1000; i > 0; i--) {
 			measurements.add(new Measurement(timestamp, metaData, value));
 			timestamp = timestamp.minus(1, ChronoUnit.HOURS);

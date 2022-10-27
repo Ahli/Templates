@@ -1,4 +1,4 @@
-package com.ahli.example.demo;
+package mongodb.timeseries.demo.persistence.model;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
