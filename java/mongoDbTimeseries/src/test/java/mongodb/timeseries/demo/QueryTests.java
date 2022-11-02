@@ -85,13 +85,13 @@ class QueryTests {
 
         assertThat(buckets).hasSize(2);
 
-        assertThat(buckets.get(0).getStartDate()).isEqualTo(startGE);
-        assertThat(buckets.get(0).getAverage()).isEqualTo(981.5);
-        assertThat(buckets.get(0).getLast()).isEqualTo(987);
+        assertThat(buckets.get(0).startDate()).isEqualTo(startGE);
+        assertThat(buckets.get(0).average()).isEqualTo(981.5);
+        assertThat(buckets.get(0).last()).isEqualTo(987);
 
-        assertThat(buckets.get(1).getStartDate()).isEqualTo(mid);
-        assertThat(buckets.get(1).getAverage()).isEqualTo(993.5);
-        assertThat(buckets.get(1).getLast()).isEqualTo(999);
+        assertThat(buckets.get(1).startDate()).isEqualTo(mid);
+        assertThat(buckets.get(1).average()).isEqualTo(993.5);
+        assertThat(buckets.get(1).last()).isEqualTo(999);
     }
 
 }

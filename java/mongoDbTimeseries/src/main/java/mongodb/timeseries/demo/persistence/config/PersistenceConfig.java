@@ -31,7 +31,8 @@ public class PersistenceConfig {
     private void ensureMetaDataTimestampIndex(Class<?> collectionClass) {
         mongoTemplate.indexOps(collectionClass).ensureIndex(
                 new CompoundIndexDefinition(new Document()
-                        .append("metaData", 1)
+                        .append("metaData.deviceId", 1)
+                        .append("metaData.dataType", 1)
                         .append("timestamp", 1)));
     }
 

@@ -14,6 +14,29 @@ import java.util.List;
 @Repository
 public interface MeasurementRepository extends MongoRepository<Measurement, String> {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Query("""
             {  'metaData.deviceId': :#{#metaData.deviceId()}
                'metaData.dataType': :#{#metaData.dataType()},
@@ -21,12 +44,51 @@ public interface MeasurementRepository extends MongoRepository<Measurement, Stri
             }""")
     List<Measurement> findInInterval(MetaData metaData, Instant timeGE, Instant timeLT);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Aggregation({
             "{ $match: { 'metaData.deviceId': :#{#metaData.deviceId()}," +
                     "    'metaData.dataType': :#{#metaData.dataType()}   } }",
             "{ $sort: { timestamp: -1 } }",
             "{ $limit: 1 }"})
     Measurement findLast(MetaData metaData);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Aggregation({
             "{ $match: { 'metaData.deviceId': :#{#metaData.deviceId()}," +
