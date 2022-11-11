@@ -20,7 +20,7 @@
 		<java.version>17</java.version>
 
 		<!-- https://github.com/deweyjose/graphqlcodegen -->
-		<graphqlcodegen-maven-plugin.version>1.24</graphqlcodegen-maven-plugin.version>
+		<graphqlcodegen-maven-plugin.version>1.26</graphqlcodegen-maven-plugin.version>
 		<graphql-dgs-codegen-client-core.version>5.1.17</graphql-dgs-codegen-client-core.version>
 		<graphql-dgs-spring-boot-starter.version>5.3.0</graphql-dgs-spring-boot-starter.version>
 		<!-- https://github.com/graphql-java/graphql-java-extended-scalars/releases -->
