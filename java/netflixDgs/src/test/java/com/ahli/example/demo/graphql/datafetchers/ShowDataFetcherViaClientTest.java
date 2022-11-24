@@ -12,10 +12,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class ShowsDataFetcherViaClientTest {
+class ShowDataFetcherViaClientTest {
 	final MonoGraphQLClient monoGraphQLClient;
 	
-	public ShowsDataFetcherViaClientTest(@LocalServerPort final Integer port) {
+	public ShowDataFetcherViaClientTest(@LocalServerPort final Integer port) {
 		final WebClient webClient = WebClient.create("http://localhost:" + port.toString() + "/graphql");
 		this.monoGraphQLClient = MonoGraphQLClient.createWithWebClient(webClient);
 	}

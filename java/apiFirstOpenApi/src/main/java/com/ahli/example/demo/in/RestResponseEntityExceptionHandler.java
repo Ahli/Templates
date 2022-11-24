@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -36,7 +37,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 				request);
 	}
 	
-	private ErrorDto error(final HttpStatus status, final String msg) {
+	private ErrorDto error(final HttpStatusCode status, final String msg) {
 		return new ErrorDto(status.value(), msg);
 	}
 	
@@ -52,7 +53,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 	protected ResponseEntity<Object> handleHttpMessageNotReadable(
 			@NonNull final HttpMessageNotReadableException ex,
 			@NonNull final HttpHeaders headers,
-			@NonNull final HttpStatus status,
+			@NonNull final HttpStatusCode status,
 			@NonNull final WebRequest request) {
 		
 		String msg = "Request could not be validated: ";
@@ -79,11 +80,10 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 	}
 	
 	@Override
-	@NonNull
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(
 			@NonNull final MethodArgumentNotValidException ex,
 			@NonNull final HttpHeaders headers,
-			@NonNull final HttpStatus status,
+			@NonNull final HttpStatusCode status,
 			@NonNull final WebRequest webRequest) {
 		
 		String msg = "Request could not be validated";
