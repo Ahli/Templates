@@ -22,15 +22,28 @@
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://github.com/deweyjose/graphqlcodegen -->
 		<graphqlcodegen-maven-plugin.version>1.27</graphqlcodegen-maven-plugin.version>
-		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs.codegen/graphql-dgs-codegen-client-core -->
-		<graphql-dgs-codegen-client-core.version>5.1.17</graphql-dgs-codegen-client-core.version>
+		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs.codegen/graphql-dgs-codegen-shared-core -->
+		<graphql-dgs-codegen-shared-core.version>5.6.9</graphql-dgs-codegen-shared-core.version>
 		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs/graphql-dgs-spring-boot-starter -->
-		<graphql-dgs-spring-boot-starter.version>5.3.0</graphql-dgs-spring-boot-starter.version>
+		<graphql-dgs-spring-boot-starter.version>5.5.1</graphql-dgs-spring-boot-starter.version>
+		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java -->
+		<graphql-java.version>19.3</graphql-java.version>
 		<!-- https://github.com/graphql-java/graphql-java-extended-scalars/releases -->
 		<graphql-java-extended-scalars.version>20.0</graphql-java-extended-scalars.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
 		<build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.graphql-java</groupId>
+				<artifactId>graphql-java</artifactId>
+				<version>${graphql-java.version}</version>
+				<scope>compile</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
@@ -49,13 +62,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.netflix.graphql.dgs.codegen</groupId>
-			<artifactId>graphql-dgs-codegen-client-core</artifactId>
-			<version>${graphql-dgs-codegen-client-core.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.graphql-java</groupId>
-			<artifactId>graphql-java-extended-scalars</artifactId>
-			<version>${graphql-java-extended-scalars.version}</version>
+			<artifactId>graphql-dgs-codegen-shared-core</artifactId>
+			<version>${graphql-dgs-codegen-shared-core.version}</version>
 		</dependency>
 
 		<dependency>
@@ -125,7 +133,7 @@
 				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-enforcer-plugin -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.1.0</version>
+				<version>3.2.1</version>
 				<executions>
 					<execution>
 						<goals>

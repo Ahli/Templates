@@ -2,6 +2,7 @@ package com.ahli.example.demo.graphql.datafetchers;
 
 import com.netflix.graphql.dgs.client.GraphQLResponse;
 import com.netflix.graphql.dgs.client.MonoGraphQLClient;
+import org.intellij.lang.annotations.Language;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
@@ -22,6 +23,7 @@ class ShowDataFetcherViaClientTest {
 	
 	@Test
 	void shows() {
+		@Language("graphql")
 		final String query = "{ shows { title releaseYear }}";
 		
 		// Read more about executeQuery() at https://netflix.github.io/dgs/advanced/java-client/
