@@ -19,11 +19,11 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://mvnrepository.com/artifact/org.openapitools/openapi-generator-maven-plugin -->
-		<openapi-generator-maven-plugin.version>6.2.1</openapi-generator-maven-plugin.version>
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-		<springfox-swagger2.version>3.0.0</springfox-swagger2.version>
+		<openapi-generator-maven-plugin.version>6.4.0</openapi-generator-maven-plugin.version>
+		<!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations -->
+		<swagger-annotations.version>2.2.8</swagger-annotations.version>
 		<!-- https://mvnrepository.com/artifact/org.openapitools/jackson-databind-nullable -->
-		<jackson-databind-nullable.version>0.2.5</jackson-databind-nullable.version>
+		<jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version>
 	</properties>
 
 	<dependencies>
@@ -62,9 +62,9 @@
 			<version>${jackson-databind-nullable.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>${springfox-swagger2.version}</version>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>${swagger-annotations.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
