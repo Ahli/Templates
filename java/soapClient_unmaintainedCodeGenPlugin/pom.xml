@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.2</version>
+		<version>3.0.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -87,26 +87,29 @@
 
 			<!-- soap client generation -->
 			<plugin>
+				<!-- for Spring Boot 2 supporting javax: -->
 <!--				<groupId>org.jvnet.jaxb2.maven2</groupId>-->
 <!--				<artifactId>maven-jaxb2-plugin</artifactId>-->
 <!--				<version>${maven-jaxb2-plugin.version}</version>-->
+<!--				<dependencies>-->
+<!--					&lt;!&ndash; support JDK 17 &ndash;&gt;-->
+<!--					<dependency>-->
+<!--						<groupId>org.glassfish.jaxb</groupId>-->
+<!--						<artifactId>jaxb-runtime</artifactId>-->
+<!--						&lt;!&ndash; use the version defined by the Spring parent &ndash;&gt;-->
+<!--						<version>${glassfish-jaxb.version}</version>-->
+<!--					</dependency>-->
+<!--				</dependencies>-->
+				<!-- fork for Spring Boot 3 supporting jakarta: -->
 				<groupId>com.evolvedbinary.maven.jvnet</groupId>
 				<artifactId>jaxb30-maven-plugin</artifactId>
 				<version>${jaxb30-maven-plugin.version}</version>
-				<dependencies>
-					<!-- support JDK 17 -->
-					<dependency>
-						<groupId>org.glassfish.jaxb</groupId>
-						<artifactId>jaxb-runtime</artifactId>
-						<!-- use the version defined by the Spring parent -->
-						<version>${glassfish-jaxb.version}</version>
-					</dependency>
-				</dependencies>
 				<configuration>
 					<schemaLanguage>WSDL</schemaLanguage>
 					<episode>false</episode>
 				</configuration>
 				<executions>
+					<!-- use multiple executions to generate multiple clients -->
 					<execution>
 						<id>service1</id>
 						<goals>
