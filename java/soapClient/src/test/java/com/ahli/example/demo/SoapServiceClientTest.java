@@ -43,7 +43,7 @@ class SoapServiceClientTest {
 		
 		mockServer = MockWebServiceServer.createServer(client);
 		XMLUnit.setIgnoreWhitespace(true);
-		// TODO whitespace is not ignored in the validRequest.xml... bug in Spring-WS in 4.0.1 & 3.1.5
+		// TODO whitespace is not ignored in the validRequest.xml... bug in Spring-WS version 4.0.1, 4.0.2, 3.1.5, 3.1.6
 		//    => removed whitespace in validRequest.xml
 	}
 	
