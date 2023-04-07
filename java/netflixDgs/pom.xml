@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.9</version>
+		<version>3.0.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -21,13 +21,13 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://github.com/deweyjose/graphqlcodegen -->
-		<graphqlcodegen-maven-plugin.version>1.27</graphqlcodegen-maven-plugin.version>
+		<graphqlcodegen-maven-plugin.version>1.31</graphqlcodegen-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs.codegen/graphql-dgs-codegen-shared-core -->
-		<graphql-dgs-codegen-shared-core.version>5.6.9</graphql-dgs-codegen-shared-core.version>
+		<graphql-dgs-codegen-shared-core.version>5.7.1</graphql-dgs-codegen-shared-core.version>
 		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs/graphql-dgs-spring-boot-starter -->
-		<graphql-dgs-spring-boot-starter.version>5.5.1</graphql-dgs-spring-boot-starter.version>
+		<graphql-dgs-spring-boot-starter.version>6.0.3</graphql-dgs-spring-boot-starter.version>
 		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java -->
-		<graphql-java.version>19.3</graphql-java.version>
+		<graphql-java.version>19.5</graphql-java.version>
 		<!-- https://github.com/graphql-java/graphql-java-extended-scalars/releases -->
 		<graphql-java-extended-scalars.version>20.0</graphql-java-extended-scalars.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
@@ -104,7 +104,7 @@
 						<param>src/main/resources/schema/schema.graphqls</param>
 					</schemaPaths>
 					<packageName>com.ahli.example.demo.graphql.generated</packageName>
-					<generateClient>true</generateClient>
+					<generateClientApiV2>true</generateClientApiV2>
 					<javaGenerateAllConstructor>true</javaGenerateAllConstructor>
 					<addGeneratedAnnotation>true</addGeneratedAnnotation>
 				</configuration>
@@ -133,7 +133,7 @@
 				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-enforcer-plugin -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.2.1</version>
+				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<goals>
