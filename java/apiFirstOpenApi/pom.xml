@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.5</version>
+		<version>3.0.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ahli.example</groupId>
@@ -19,7 +19,7 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://mvnrepository.com/artifact/org.openapitools/openapi-generator-maven-plugin -->
-		<openapi-generator-maven-plugin.version>6.4.0</openapi-generator-maven-plugin.version>
+		<openapi-generator-maven-plugin.version>6.5.0</openapi-generator-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations -->
 		<swagger-annotations.version>2.2.9</swagger-annotations.version>
 		<!-- https://mvnrepository.com/artifact/org.openapitools/jackson-databind-nullable -->
@@ -111,6 +111,7 @@
 									@lombok.NoArgsConstructor
 									@lombok.AllArgsConstructor
 								</additionalModelTypeAnnotations>
+								<generatedConstructorWithRequiredArgs>false</generatedConstructorWithRequiredArgs>
 								<useSpringBoot3>true</useSpringBoot3>
 							</configOptions>
 							<modelNameSuffix>Dto</modelNameSuffix>
