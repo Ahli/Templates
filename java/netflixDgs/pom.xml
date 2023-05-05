@@ -23,9 +23,9 @@
 		<!-- https://github.com/deweyjose/graphqlcodegen -->
 		<graphqlcodegen-maven-plugin.version>1.32</graphqlcodegen-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs.codegen/graphql-dgs-codegen-shared-core -->
-		<graphql-dgs-codegen-shared-core.version>5.7.1</graphql-dgs-codegen-shared-core.version>
+		<graphql-dgs-codegen-shared-core.version>5.7.2</graphql-dgs-codegen-shared-core.version>
 		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs/graphql-dgs-spring-boot-starter -->
-		<graphql-dgs-spring-boot-starter.version>6.0.4</graphql-dgs-spring-boot-starter.version>
+		<graphql-dgs-spring-boot-starter.version>6.0.5</graphql-dgs-spring-boot-starter.version>
 		<!-- https://github.com/graphql-java/graphql-java-extended-scalars/releases -->
 		<graphql-java-extended-scalars.version>20.2</graphql-java-extended-scalars.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
