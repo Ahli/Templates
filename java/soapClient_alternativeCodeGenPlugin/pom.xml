@@ -21,7 +21,7 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://github.com/highsource/maven-jaxb2-plugin/releases -->
-<!--		<maven-jaxb2-plugin.version>0.15.2</maven-jaxb2-plugin.version>-->
+<!--		<maven-jaxb2-plugin.version>0.15.3</maven-jaxb2-plugin.version>-->
 		<!-- https://mvnrepository.com/artifact/com.evolvedbinary.maven.jvnet/jaxb30-maven-plugin -->
 		<jaxb30-maven-plugin.version>0.15.0</jaxb30-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
