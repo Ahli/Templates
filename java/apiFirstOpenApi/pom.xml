@@ -21,7 +21,7 @@
 		<!-- https://mvnrepository.com/artifact/org.openapitools/openapi-generator-maven-plugin -->
 		<openapi-generator-maven-plugin.version>6.6.0</openapi-generator-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations -->
-		<swagger-annotations.version>2.2.10</swagger-annotations.version>
+		<swagger-annotations.version>2.2.11</swagger-annotations.version>
 		<!-- https://mvnrepository.com/artifact/org.openapitools/jackson-databind-nullable -->
 		<jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version>
 	</properties>
