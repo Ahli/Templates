@@ -32,7 +32,7 @@
 		<build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
 		<!-- transitive dependencies -->
 		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java -->
-		<graphql-java.version>19.5</graphql-java.version>
+		<graphql-java.version>19.6</graphql-java.version>
 	</properties>
 
 	<dependencyManagement>
