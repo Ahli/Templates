@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.1</version>
+		<version>3.1.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -21,18 +21,18 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://github.com/deweyjose/graphqlcodegen -->
-		<graphqlcodegen-maven-plugin.version>1.38</graphqlcodegen-maven-plugin.version>
+		<graphqlcodegen-maven-plugin.version>1.39</graphqlcodegen-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs.codegen/graphql-dgs-codegen-shared-core -->
-		<graphql-dgs-codegen-shared-core.version>5.9.1</graphql-dgs-codegen-shared-core.version>
+		<graphql-dgs-codegen-shared-core.version>5.12.4</graphql-dgs-codegen-shared-core.version>
 		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs/graphql-dgs-spring-boot-starter -->
-		<graphql-dgs-spring-boot-starter.version>6.0.5</graphql-dgs-spring-boot-starter.version>
+		<graphql-dgs-spring-boot-starter.version>7.3.6</graphql-dgs-spring-boot-starter.version>
 		<!-- https://github.com/graphql-java/graphql-java-extended-scalars/releases -->
 		<graphql-java-extended-scalars.version>20.2</graphql-java-extended-scalars.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
 		<build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
 		<!-- transitive dependencies -->
 		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java -->
-		<graphql-java.version>19.6</graphql-java.version>
+		<graphql-java.version>21.0</graphql-java.version>
 	</properties>
 
 	<dependencyManagement>
