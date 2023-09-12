@@ -28,7 +28,7 @@ class QueryTests {
 
     @Container
     private static final MongoDBContainer mongo =
-            new MongoDBContainer(DockerImageName.parse("mongo:6.0.2"));
+            new MongoDBContainer(DockerImageName.parse("mongo:7.0"));
 
     @Autowired
     private MeasurementRepository measurementRepository;
