@@ -32,7 +32,8 @@ public class CatDogRecognition {
 	public static void main(String[] args) throws IOException, ModelCreationException, URISyntaxException {
 		System.out.println("VisRec API (JSR 381) implementation: " + getImplementationString());
 		
-		Path modelFile = Paths.get("javaVisRec\\output\\catdog.dnet");
+		Path modelFile = Paths.get("java\\javaVisRec\\target\\output\\catdog.dnet");
+		System.out.println("model file path: " + modelFile.toAbsolutePath());
 		
 		trainModel(modelFile);
 		
@@ -104,7 +105,7 @@ public class CatDogRecognition {
 	}
 	
 	public static DataSetExamples.ExampleDataSet getCatDogDataSet() throws IOException {
-		Path mnistPath = Paths.get("datasets", "cats_and_dogs");
+		Path mnistPath = Paths.get("java", "javaVisRec", "target", "datasets", "cats_and_dogs");
 		File mnistFolder = mnistPath.toFile();
 		System.out.printf("Downloading and/or unpacking cat_and_dog training set to: %s - this may take a while!%n",
 				mnistFolder.getAbsolutePath());
