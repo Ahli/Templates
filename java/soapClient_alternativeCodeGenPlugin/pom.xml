@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.0-M2</version>
+		<version>3.2.0-RC2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -20,19 +20,17 @@
 		<java.version>21</java.version>
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
-		<!-- https://github.com/highsource/maven-jaxb2-plugin/releases -->
-<!--		<maven-jaxb2-plugin.version>0.15.3</maven-jaxb2-plugin.version>-->
-		<!-- https://mvnrepository.com/artifact/com.evolvedbinary.maven.jvnet/jaxb30-maven-plugin -->
-		<jaxb30-maven-plugin.version>0.15.0</jaxb30-maven-plugin.version>
+		<!-- https://github.com/highsource/jaxb-tools/releases -->
+		<jaxb-maven-plugin.version>4.0.0</jaxb-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
 		<build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
-		<lombok.version>1.18.30</lombok.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<optional>true</optional>
 		</dependency>
 
 		<!-- generated soap client dependencies -->
@@ -85,23 +83,9 @@
 
 			<!-- soap client generation -->
 			<plugin>
-				<!-- for Spring Boot 2 supporting javax: -->
-<!--				<groupId>org.jvnet.jaxb2.maven2</groupId>-->
-<!--				<artifactId>maven-jaxb2-plugin</artifactId>-->
-<!--				<version>${maven-jaxb2-plugin.version}</version>-->
-<!--				<dependencies>-->
-<!--					&lt;!&ndash; support JDK 17 &ndash;&gt;-->
-<!--					<dependency>-->
-<!--						<groupId>org.glassfish.jaxb</groupId>-->
-<!--						<artifactId>jaxb-runtime</artifactId>-->
-<!--						&lt;!&ndash; use the version defined by the Spring parent &ndash;&gt;-->
-<!--						<version>${glassfish-jaxb.version}</version>-->
-<!--					</dependency>-->
-<!--				</dependencies>-->
-				<!-- fork for Spring Boot 3 supporting jakarta: -->
-				<groupId>com.evolvedbinary.maven.jvnet</groupId>
-				<artifactId>jaxb30-maven-plugin</artifactId>
-				<version>${jaxb30-maven-plugin.version}</version>
+				<groupId>org.jvnet.jaxb</groupId>
+				<artifactId>jaxb-maven-plugin</artifactId>
+				<version>${jaxb-maven-plugin.version}</version>
 				<configuration>
 					<schemaLanguage>WSDL</schemaLanguage>
 					<episode>false</episode>
