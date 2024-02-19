@@ -21,7 +21,7 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://github.com/highsource/jaxb-tools/releases -->
-		<jaxb-maven-plugin.version>4.0.0</jaxb-maven-plugin.version>
+		<jaxb-maven-plugin.version>4.0.3</jaxb-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
 		<build-helper-maven-plugin.version>3.5.0</build-helper-maven-plugin.version>
 	</properties>
