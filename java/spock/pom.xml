@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.3</version>
+		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -21,7 +21,7 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://mvnrepository.com/artifact/org.spockframework/spock-spring -->
-		<spock-spring.version>2.4-M2-groovy-4.0</spock-spring.version>
+		<spock-spring.version>2.4-M4-groovy-4.0</spock-spring.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.gmavenplus/gmavenplus-plugin -->
 		<gmavenplus-plugin.version>3.0.2</gmavenplus-plugin.version>
 		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
