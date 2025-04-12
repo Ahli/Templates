@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.5</version>
+		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ahli.example</groupId>
@@ -19,9 +19,9 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://mvnrepository.com/artifact/org.openapitools/openapi-generator-maven-plugin -->
-		<openapi-generator-maven-plugin.version>7.6.0</openapi-generator-maven-plugin.version>
+		<openapi-generator-maven-plugin.version>7.12.0</openapi-generator-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations -->
-		<swagger-annotations.version>2.2.22</swagger-annotations.version>
+		<swagger-annotations.version>2.2.30</swagger-annotations.version>
 		<!-- https://mvnrepository.com/artifact/org.openapitools/jackson-databind-nullable -->
 		<jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version>
 	</properties>
@@ -124,7 +124,7 @@
 				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-enforcer-plugin -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.4.1</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -133,7 +133,7 @@
 						<configuration>
 							<rules>
 								<requireMavenVersion>
-									<version>[3.2.5,)</version>
+									<version>[3.6.3,)</version>
 								</requireMavenVersion>
 							</rules>
 						</configuration>

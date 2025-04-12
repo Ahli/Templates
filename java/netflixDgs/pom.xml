@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.5</version>
+		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -21,18 +21,18 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://github.com/deweyjose/graphqlcodegen -->
-		<graphqlcodegen-maven-plugin.version>1.60.1</graphqlcodegen-maven-plugin.version>
+		<graphqlcodegen-maven-plugin.version>1.61.6</graphqlcodegen-maven-plugin.version>
 		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs.codegen/graphql-dgs-codegen-shared-core -->
-		<graphql-dgs-codegen-shared-core.version>6.1.10</graphql-dgs-codegen-shared-core.version>
+		<graphql-dgs-codegen-shared-core.version>8.0.1</graphql-dgs-codegen-shared-core.version>
 		<!-- https://mvnrepository.com/artifact/com.netflix.graphql.dgs/graphql-dgs-spring-boot-starter -->
-		<graphql-dgs-spring-boot-starter.version>8.6.0</graphql-dgs-spring-boot-starter.version>
+		<graphql-dgs-spring-boot-starter.version>9.2.2</graphql-dgs-spring-boot-starter.version>
 		<!-- https://github.com/graphql-java/graphql-java-extended-scalars/releases -->
 		<graphql-java-extended-scalars.version>22.0</graphql-java-extended-scalars.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/build-helper-maven-plugin -->
 		<build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
 		<!-- transitive dependencies -->
 		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java -->
-		<graphql-java.version>21.5</graphql-java.version>
+		<graphql-java.version>23.0</graphql-java.version>
 	</properties>
 
 	<dependencyManagement>
@@ -134,7 +134,7 @@
 				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-enforcer-plugin -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.4.1</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<goals>

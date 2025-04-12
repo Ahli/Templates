@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.5</version>
+		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -21,11 +21,11 @@
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 		<!-- https://mvnrepository.com/artifact/org.spockframework/spock-spring -->
-		<spock-spring.version>2.4-M4-groovy-4.0</spock-spring.version>
+		<spock-spring.version>2.4-M5-groovy-4.0</spock-spring.version>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.gmavenplus/gmavenplus-plugin -->
-		<gmavenplus-plugin.version>3.0.2</gmavenplus-plugin.version>
+		<gmavenplus-plugin.version>4.1.1</gmavenplus-plugin.version>
 		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-		<maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+		<maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -86,7 +86,7 @@
 				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-enforcer-plugin -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.4.1</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -95,7 +95,7 @@
 						<configuration>
 							<rules>
 								<requireMavenVersion>
-									<version>[3.2.5,)</version>
+									<version>[3.6.3,)</version>
 								</requireMavenVersion>
 							</rules>
 						</configuration>
